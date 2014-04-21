@@ -6,17 +6,22 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Question.delete_all
+Answer.delete_all
 
-questions = Question.create([
+question = Question.new(
   {prompt: 'Which of the following is a food group?',
+   correct_answer_id: 3,
   },
-])
+)
 
-Answer.create([
-  {question: questions.first, answer_text: "beans" },
-  {question: questions.first, answer_text: "sweets" },
-  {question: questions.first, answer_text: "fruits" },
-  {question: questions.first, answer_text: "milk" },
+answers = [
+  {question: question, answer_text: "beans", id: 1 },
+  {question: question, answer_text: "sweets", id: 2 },
+  {question: question, answer_text: "fruits", id: 3 },
+  {question: question, answer_text: "milk", id: 4 },
 
-])
+].map{|args| Answer.new(args)}
 
+question.save
+answers.map{|ans| ans.save}

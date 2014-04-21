@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140406022252) do
+ActiveRecord::Schema.define(version: 20140406025909) do
 
   create_table "answers", force: true do |t|
-    t.integer  "question_id", null: false
+    t.integer  "question_id"
     t.string   "answer_text"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20140406022252) do
     t.text     "prompt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "correct_answer_id"
   end
 
 end
