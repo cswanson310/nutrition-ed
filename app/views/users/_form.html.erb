@@ -1,0 +1,33 @@
+<div id='user_form'>
+  <%= form_for @user do |u| %>
+
+    <div>
+      <%= u.text_field :username, placeholder: 'Username' %>
+    </div>
+    <ul id='username_errors'>
+      <% @user.errors.messages[:username].each do |msg| %>
+        <li class='inline-error'><%=msg%></li>
+      <% end %>
+    </ul>
+
+    <div>
+      <%= u.password_field :new_password, placeholder: 'Password' %>
+    </div>
+
+    <div>
+      <%= u.password_field :new_password_confirmation, placeholder: 'Confirm Password' %>
+    </div>
+    <ul id='password_errors'>
+      <% @user.errors.messages[:new_password_confirmation].each do |msg| %>
+        <li class='inline-error'><%=msg%></li>
+      <% end.join(',') %>
+    </ul>
+
+    <div>
+      <%= u.submit %>
+    </div>
+  <% end %>
+</div>
+<div id='login'>
+  <p>Already a user? <a href='<%= new_user_session_path %>'>Log in</a></p>
+</div>

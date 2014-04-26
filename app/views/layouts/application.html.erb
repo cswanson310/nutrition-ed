@@ -10,5 +10,11 @@
 
 <%= yield %>
 
+<div class='logout'>
+  <% if session[:user_id] && @user then %>
+    <p>Logged in as <%= @user.username %>, <%= link_to "Logout", logout_path %></p>
+  <% end %>
+</div>
+
 </body>
 </html>

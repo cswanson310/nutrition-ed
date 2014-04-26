@@ -4,9 +4,14 @@ NutritionEd::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  root 'users#new'
 
   resources :question, only: [:show]
+
+  resources :user_sessions, only: [:new, :create, :destroy]
+
+  get 'login', to: 'user_sessions#new', as: :login
+  get 'logout', to: 'user_sessions#destroy', as: :logout
 
   resources :api, only: [] do
     collection do
@@ -14,6 +19,8 @@ NutritionEd::Application.routes.draw do
       get 'next_question'
     end
   end
+
+  resources :users, only: [:new, :create, :show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
