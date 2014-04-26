@@ -4,11 +4,9 @@ class ApiController < ApplicationController
   include QuestionHelper
 
   def choose_answer
-    p "OMG THIS IS WORKING?"
-    p @question.correct_answer.id
     puts params
     correct = false
-    if (params[:answer_id].to_i == @question.correct_answer.id) then
+    if (params[:answer_id].to_i == @question.correct_answer_id) then
       correct = true
     end
 

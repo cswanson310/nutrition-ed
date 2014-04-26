@@ -6,6 +6,7 @@ $ ->
   $('.answer').bind('click', () ->
     $(this).css({'background': 'green'})
     console.log($('.question_text').attr('id'))
+    console.log($(this).attr('id'))
     $.ajax(
       type: 'GET',
       url: "/api/choose_answer",
