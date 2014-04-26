@@ -5,5 +5,22 @@
 $ ->
   $('.answer').bind('click', () ->
     $(this).css({'background': 'green'})
+    console.log($('.question_text').attr('id'))
+    $.ajax(
+      type: 'GET',
+      url: "/api/choose_answer",
+      datatype: 'json',
+      data: { id: $('.question_text').attr('id'), answer_id: $(this).attr('id') }
+      success: (data) ->
+        console.log(data)
+        if (data["correct"] == true)
+          $.ajax(
+            type: 'GET'
+            url: "/api/next_question",
+            success: (data) ->
+              console.log('here?')
+              window.location.replace(data["url"])
+          )
+    )
   )
 

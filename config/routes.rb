@@ -8,6 +8,13 @@ NutritionEd::Application.routes.draw do
 
   resources :question, only: [:show]
 
+  resources :api, only: [] do
+    collection do
+      get 'choose_answer'
+      get 'next_question'
+    end
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

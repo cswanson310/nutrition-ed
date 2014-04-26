@@ -1,11 +1,11 @@
-<h1><%= @question.prompt %><h1>
+<h1 class='question_text' id='<%= @question.id %>'><%= @question.prompt %><h1>
 <ul>
   <% @question.answers.each_with_index do |answer, index| %>
-    <li class='answer'>
+    <li class='answer' id='<%= answer.id %>'>
       <span class='label'>
         <%= ('A'..'Z').to_a[index] %>
       </span>
-    <%= answer.answer_text %>
+      <%= answer.answer_text %>
     </li>
   <% end %>
 </ul>
