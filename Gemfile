@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 1.0.1'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+# Seed the database easily
+gem 'seed-fu'
+
 #make urls look pretty :)
 gem 'friendly_id', github: 'FriendlyId/friendly_id', branch: 'master'
 
