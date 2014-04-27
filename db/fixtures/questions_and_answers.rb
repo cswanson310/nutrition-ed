@@ -9,3 +9,19 @@ Answer.seed(:id,
   {id: 4, question_id: 1, answer_text: "milk"}
 )
 
+Skill.seed(:id,
+  {id: 1, name: "identifying food groups"},
+  {id: 2, name: "classifying foods"},
+)
+
+#delete all previous skills
+Skill.all.each do |skill|
+  skill.questions.clear
+end
+
+[
+  [1,1]
+].each do |skill_id, question_id|
+  Skill.find(skill_id).questions << Question.find(question_id)
+end
+
