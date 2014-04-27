@@ -4,6 +4,9 @@ require 'bcrypt'
 # very helpful!
 class User < ActiveRecord::Base
 
+  has_many :user_skills
+  has_many :skills, through: :user_skills
+
   extend FriendlyId
 
   friendly_id :url_name, use: :slugged

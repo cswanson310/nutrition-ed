@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140427031416) do
+ActiveRecord::Schema.define(version: 20140427041238) do
 
   create_table "answers", force: true do |t|
     t.integer  "question_id"
@@ -39,6 +39,19 @@ ActiveRecord::Schema.define(version: 20140427031416) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "user_skills", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "skill_id"
+    t.integer  "level",      default: 6
+    t.integer  "max_level",  default: 10
+    t.integer  "min_level",  default: 1
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_skills", ["skill_id"], name: "index_user_skills_on_skill_id"
+  add_index "user_skills", ["user_id"], name: "index_user_skills_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "username",        null: false
