@@ -1,27 +1,39 @@
-Question.seed(:id,
-  {id: 1, prompt: 'Which of the following is a food group?', correct_answer_id: 3, hint: "That's a little too specific for a food group!"} #fruits
-)
-
-Answer.seed(:id,
-  {id: 1, question_id: 1, answer_text: "beans"},
-  {id: 2, question_id: 1, answer_text: "sweets", hint: "Not quite!"},
-  {id: 3, question_id: 1, answer_text: "fruits"},
-  {id: 4, question_id: 1, answer_text: "milk"}
-)
-
-Skill.seed(:id,
-  {id: 1, name: "identifying food groups"},
-  {id: 2, name: "classifying foods"},
-)
+require 'csv'
+require 'set'
 
 #delete all previous skills
 Skill.all.each do |skill|
   skill.questions.clear
 end
 
-[
-  [1,1]
-].each do |skill_id, question_id|
-  Skill.find(skill_id).questions << Question.find(question_id)
+skills = Set.new
+count = 0
+
+CSV.foreach("#{Rails.root}/db/fixtures/Questions.csv") do |row|
+  if $. > 1 && row.first != nil then
+    count += 1
+    id = count
+    Question.seed do |s|
+      s.id = id
+      s.prompt = row.first
+      s.difficulty = row.second.to_i
+      s.hint = row.third
+    end
+    Answer.seed(:id,
+      {id: id*4 + 1, question_id: id, answer_text: row[3]},
+      {id: id*4 + 2, question_id: id, answer_text: row[4], hint: row[5]},
+      {id: id*4 + 3, question_id: id, answer_text: row[6], hint: row[7]},
+      {id: id*4 + 4, question_id: id, answer_text: row[8], hint: row[9]},
+    )
+    if (!skills.include?(row[10])) then
+      Skill.seed do |s|
+        s.id = skills.size + 1
+        s.name = row[10]
+      end
+      skills.add(row[10])
+    end
+    Skill.find_by_name(row[10]).questions << Question.find(id)
+  end
 end
+
 
