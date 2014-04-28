@@ -19,9 +19,10 @@ $ ->
             type: 'GET'
             url: "/api/next_question",
             success: (data) ->
-              console.log('here?')
               window.location.replace(data["url"])
           )
+        else if data["hint"]?
+          $('.hint').text(data["hint"])
     )
   )
 
