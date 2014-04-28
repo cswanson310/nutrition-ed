@@ -4,7 +4,7 @@ require 'bcrypt'
 # very helpful!
 class User < ActiveRecord::Base
 
-  has_many :user_skills
+  has_many :user_skills, dependent: :destroy
   has_many :skills, through: :user_skills
 
   extend FriendlyId
@@ -32,6 +32,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username, message: 'That username has already been taken'
 
   before_save :hash_new_password, :if=>:password_changed?
+  before_save :create_skills
 
   # By default the form_helpers will set new_password to "",
   # we don't want to go saving this as a password
@@ -63,6 +64,12 @@ class User < ActiveRecord::Base
     self.hashed_password = BCrypt::Password.create(@new_password)
     @new_password = nil
     @new_password_confirmation = nil
+  end
+
+  def create_skills
+    Skill.all.each do |skill|
+      self.skills << skill
+    end
   end
 
 end
