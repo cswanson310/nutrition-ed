@@ -4,9 +4,7 @@
 
 $ ->
   $('.answer').bind('click', () ->
-    $(this).css({'background': 'green'})
-    console.log($('.question_text').attr('id'))
-    console.log($(this).attr('id'))
+    answer_id = $(this).attr('id')
     $.ajax(
       type: 'GET',
       url: "/api/choose_answer",
@@ -15,14 +13,17 @@ $ ->
       success: (data) ->
         console.log(data)
         if (data["correct"] == true)
+          $('.answer#'+answer_id+" .label").css({'background': 'green'})
           $.ajax(
             type: 'GET'
             url: "/api/next_question",
             success: (data) ->
               window.location.replace(data["url"])
           )
-        else if data["hint"]?
-          $('.hint').text(data["hint"])
+        else
+          $('.answer#'+answer_id+" .label").css({'background': 'red'})
+          if data["hint"]?
+            $('.hint').text(data["hint"])
     )
   )
 

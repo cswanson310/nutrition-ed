@@ -3,8 +3,32 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .question {
-
+    .question_text {
+        font-family: sans-serif;
+        font-size: 40px;
+        margin: 15px;
+    }
     li {
+        height: 30px;
+        line-height: 30px;
+        margin: 10px;
+        margin-left: 40px;
         list-style: none;
+        font-family: sans-serif;
+        .answer_text {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        .label {
+            height: 20px;
+            width: 20px;
+            vertical-align: middle;
+            display: inline-block;
+            background: #2b8953;
+            border: 5px solid #aaa;
+            border-radius: 45%;
+        }
     }
 }

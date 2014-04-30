@@ -1,11 +1,12 @@
-<h1 class='question_text' id='<%= @question.id %>'><%= @question.prompt %><h1>
+<h1 class='question_text' id='<%= @question.id %>'><%= @question.prompt %></h1>
 <ul>
-  <% @question.answers.each_with_index do |answer, index| %>
+  <% @question.answers.shuffle.each_with_index do |answer, index| %>
     <li class='answer' id='<%= answer.id %>'>
-      <span class='label'>
-        <%= ('A'..'Z').to_a[index] %>
-      </span>
-      <%= answer.answer_text %>
+      <div class='label'>
+      </div>
+      <p class='answer_text'>
+        <%= answer.answer_text %>
+      </p>
     </li>
   <% end %>
   <p class="hint"></p>
