@@ -17,6 +17,7 @@ $ ->
           $.ajax(
             type: 'GET'
             url: "/api/next_question",
+            data: { id: $('.question_text').attr('id'), answer_id: $(this).attr('id') }
             success: (data) ->
               window.location.replace(data["url"])
           )

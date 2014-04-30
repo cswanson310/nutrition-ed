@@ -5,6 +5,8 @@ require 'set'
 Skill.all.each do |skill|
   skill.questions.clear
 end
+Question.destroy_all
+Answer.destroy_all
 
 skills = Set.new
 count = 0
