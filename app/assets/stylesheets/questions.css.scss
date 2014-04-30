@@ -11,10 +11,13 @@
     li {
         height: 30px;
         line-height: 30px;
-        margin: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        max-width: 600px;
         margin-left: 40px;
         list-style: none;
         font-family: sans-serif;
+        cursor: pointer;
         .answer_text {
             display: inline-block;
             vertical-align: middle;
@@ -29,6 +32,12 @@
             background: #2b8953;
             border: 5px solid #aaa;
             border-radius: 45%;
+        }
+    }
+    li:hover {
+        background: #aaa;
+        .label {
+            border-color: #fff;
         }
     }
 }
