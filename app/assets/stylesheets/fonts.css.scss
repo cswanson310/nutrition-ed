@@ -1,0 +1,16 @@
+h2, h3 {
+	font-family: "Trebuchet MS", sans-serif;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 25px;
+	color: $dark-grey;
+}
+
+h3 {
+	color: $dark-grey;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: lighter;
+}
