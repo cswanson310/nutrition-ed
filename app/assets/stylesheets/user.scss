@@ -7,3 +7,46 @@
         font-size: 40px;
     }
 }
+
+#steps-container, #progress-container {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#steps-container {
+	width: 70%;
+	height: auto;
+	margin-right: 45px;
+	.step {
+		height: 290px;
+		width: 90%;
+		margin: 30px auto 45px auto;
+		border-bottom: 1px solid $light-grey;
+		.substep {
+			padding-top: 48px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			li {
+				display: inline-block;
+				margin: 0 40px 0 40px;
+				vertical-align: top;
+			}
+			.substep-title {
+				margin-top: 15px;
+				width: 100px;
+			}
+			.substep-image {
+
+			}
+		}
+	}
+	#meal-planning {
+		border-bottom: none;
+	}
+}
+
+#progress-container {
+	width: 25%;
+	height: 200px;
+}
