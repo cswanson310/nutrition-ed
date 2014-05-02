@@ -65,7 +65,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
             #logo {
                 font-family: "Rancho";
                 font-size: 56px;
-                margin-right: 50px;
+                margin-right: 30px;
                 #name {
                     padding-left: 20px;
                 }
@@ -74,6 +74,35 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
                     vertical-align: top;
                     display: inline-block;
                 }
+            }
+            #profile-image {
+                background: $light-grey;
+                @include border-radius(25px);
+                height: 45px;
+                width: 45px;
+                display: inline-block;
+                margin-left: 130px;
+                .inner-image {
+                    padding-top: 7px;
+                    padding-left: 1px;
+                    display: inline-block;
+                }
+            }
+            #username {
+                font-size: 14px;
+            }
+            #cookie-number {
+                font-size: 22px;
+            }
+            #cookies {
+                vertical-align: top;
+                display: inline-block;
+                margin-left: 40px;
+                padding-top: 8px;
+            }
+            #cookie-number, #username {
+                font-family: "Trebuchet MS", sans-serif;
+                margin-left: 4px;
             }
         }
     }

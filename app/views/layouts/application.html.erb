@@ -16,7 +16,10 @@
       <li class='nav-link nav-option' id='home'><a href='/'>For Kids</a></li>
       <li class='nav-link nav-option' id='home'><a href='/'>For Parents</a></li>
       <% if current_user then %>
+        <li class='nav-option' id='profile-image'><span class="inner-image"><%= image_tag("profile-image.svg") %></span></li>
         <li class='nav-option' id='username'><%= link_to current_user.username.capitalize, user_path(current_user) %></li>
+        <li class='nav-option' id='cookies'><%= image_tag("cookie.svg") %></li>
+        <li class='nav-option' id='cookie-number'>1</li>
       <% end %>
     </ul>
   </div>
