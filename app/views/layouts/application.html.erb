@@ -11,7 +11,9 @@
 <div class='navbar'>
   <ul class='options'>
     <li class='nav-option' id='tomato-icon'><%= image_tag("tomato.png") %></li>
-    <li class='nav-option' id='home'><a href='/'>Home</a></li>
+    <li class='nav-option active-nav' id='home'><a href='/'>Home</a></li>
+    <li class='nav-option' id='home'><a href='/'>For Kids</a></li>
+    <li class='nav-option' id='home'><a href='/'>For Parents</a></li>
     <% if current_user then %>
       <li class='nav-option' id='username'><%= link_to current_user.username.capitalize, user_path(current_user) %></li>
     <% end %>
