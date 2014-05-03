@@ -126,7 +126,7 @@ body {
 .container {
     background: #ffffff;
     @include border-radius(30px);
-    padding: 20px;
+    padding: 30px 30px 10px 30px;
 }
 
 .new-line {

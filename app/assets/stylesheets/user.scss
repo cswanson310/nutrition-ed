@@ -14,15 +14,16 @@
 }
 
 #steps-container {
-	width: 70%;
+	width: 58%;
 	height: auto;
-	margin-right: 25px;
+	margin-right: 53px;
+	#food-groups {
+		margin-top: 0px;
+	}
 	.step {
-		height: 290px;
 		width: 90%;
-		padding-bottom: 30px;
-		margin: 30px auto 45px auto;
-		border-bottom: 1px solid $light-grey;
+		padding-bottom: 60px;
+		margin: 30px auto 0 auto;
 		.substep {
 			padding-top: 48px;
 			margin-left: auto;
@@ -30,7 +31,7 @@
 			text-align: center;
 			li {
 				display: inline-block;
-				margin: 0 25px 0 25px;
+				margin: 0 8px 0 8px;
 				vertical-align: top;
 			}
 			li.locked {
@@ -47,6 +48,7 @@
 			li.unlocked {
 				.substep-icon:hover {
 					background: $lighter-primary-color;
+					cursor: pointer;
 				}
 			}
 			.substep-title {
@@ -56,14 +58,14 @@
 			.substep-icon {
 				background: $primary-color;
 				display: inline-block;
-				height: 150px;
-				width: 150px;
+				height: 110px;
+				width: 110px;
 				@include border-radius(74px);
 				.substep-image{
 					display: inline-block;
-					margin: 30px auto 0 auto;
-					height: 100px;
-					width: 100px;
+					margin: 27px auto 0 auto;
+					height: 60px;
+					width: 60px;
 				}
 			}
 		}
@@ -74,7 +76,7 @@
 }
 
 #progress-container {
-	width: 27%;
+	width: 23%;
 	height: 300px;
 }
 

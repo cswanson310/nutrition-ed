@@ -1,7 +1,7 @@
 <h4>Food Groups</h4>
 <h1>Basics</h1>
 <div class="container" id="question-container">
-  <h3 class="question-text" id='<%= @question.id %>'><%= @question.prompt %></h3>
+  <h6 class="question-text" id='<%= @question.id %>'><%= @question.prompt %></h6>
   <div class='answers'>
     <ul>
       <% @question.answers.shuffle.each do |answer| %>
