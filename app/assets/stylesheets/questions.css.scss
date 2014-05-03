@@ -3,18 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .question {
-    .question_text {
-        font-family: sans-serif;
-        font-size: 40px;
-        margin: 15px;
-    }
     .skills {
         font-family: sans-serif;
         margin-left: 15px;
         margin-bottom: 20px;
     }
     .answers {
-        li {
+        .answer {
             height: 30px;
             line-height: 30px;
             padding: 10px;
@@ -31,13 +26,18 @@
                 margin-left: 10px;
             }
             .label {
-                height: 20px;
-                width: 20px;
+                height: 25px;
+                width: 25px;
                 vertical-align: middle;
                 display: inline-block;
-                background: #2b8953;
-                border: 5px solid #aaa;
-                border-radius: 45%;
+                background: $light-grey;
+                border-radius: 50%;
+                border: 5px solid $light-grey;
+            }
+        }
+        .answer-selected {
+            .label {
+                background: $primary-color !important;
             }
         }
         li:hover {

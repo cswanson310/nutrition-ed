@@ -15,6 +15,7 @@
  @import "mixins.css.scss";
  @import "user.scss";
  @import "fonts.css.scss";
+ @import "questions.css.scss";
 
 @import url(http://fonts.googleapis.com/css?family=Rancho);
 
@@ -123,4 +124,5 @@ body {
 .container {
     background: #ffffff;
     @include border-radius(30px);
+    padding: 20px;
 }
