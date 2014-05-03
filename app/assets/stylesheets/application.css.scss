@@ -16,6 +16,7 @@
  @import "user.scss";
  @import "fonts.css.scss";
  @import "questions.css.scss";
+ @import "buttons.css.scss";
 
 @import url(http://fonts.googleapis.com/css?family=Rancho);
 
@@ -38,6 +39,7 @@ body {
     margin: 0px;
     padding: 0px;
     height: 75px;
+    margin-bottom: 40px;
     .navbar {
         width: $content-width;
         margin-right: auto;
@@ -125,4 +127,8 @@ body {
     background: #ffffff;
     @include border-radius(30px);
     padding: 20px;
+}
+
+.new-line {
+    display: block;
 }
