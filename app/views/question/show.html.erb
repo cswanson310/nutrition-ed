@@ -1,22 +1,27 @@
-<h1 class='question_text' id='<%= @question.id %>'><%= @question.prompt %></h1>
-<div class='skills'>
-  <ul>
-  <% @question.skills.each do |skill| %>
-    <li class='skill'>Skill: <%= skill.name %>, Level: <%= current_user.user_skills.where(skill_id: skill.id).first.level %></li>
-  <% end %>
-  </ul>
-</div>
-<div class='answers'>
-  <ul>
-    <% @question.answers.shuffle.each do |answer| %>
-      <li class='answer' id='<%= answer.id %>'>
-        <div class='label'>
-        </div>
-        <p class='answer_text'>
-          <%= answer.answer_text %>
-        </p>
-      </li>
+<h4>Food Groups</h4>
+<h1>Basics</h1>
+<div class="container" id="question-container">
+  <h6 class="question-text" id='<%= @question.id %>'><%= @question.prompt %></h6>
+  <div class='answers'>
+    <ul>
+      <% @question.answers.shuffle.each do |answer| %>
+        <li class='answer' id='<%= answer.id %>'>
+          <div class='label'>
+          </div>
+          <p class='answer_text'>
+            <%= answer.answer_text %>
+          </p>
+        </li>
+      <% end %>
+      <p class="hint"></p>
+    </ul>
+  </div>
+  <div class='skills'>
+    <ul>
+    <% @question.skills.each do |skill| %>
+      <li class='skill'><h5><span class="new-line">Level <%= current_user.user_skills.where(skill_id: skill.id).first.level %></span><%= skill.name %></h5></li>
     <% end %>
-    <p class="hint"></p>
-  </ul>
+    </ul>
+  </div>
+  <div class="primary-button" id="next-question">Next</div>
 </div>

@@ -17,14 +17,16 @@
 }
 
 #steps-container {
-	width: 70%;
+	width: 58%;
 	height: auto;
-	margin-right: 25px;
+	margin-right: 53px;
+	#food-groups {
+		margin-top: 0px;
+	}
 	.step {
-		height: 290px;
 		width: 90%;
-		margin: 30px auto 45px auto;
-		border-bottom: 1px solid $light-grey;
+		padding-bottom: 60px;
+		margin: 30px auto 0 auto;
 		.substep {
 			padding-top: 48px;
 			margin-left: auto;
@@ -32,15 +34,42 @@
 			text-align: center;
 			li {
 				display: inline-block;
-				margin: 0 40px 0 40px;
+				margin: 0 8px 0 8px;
 				vertical-align: top;
 			}
-			.substep-title {
-				margin-top: 15px;
-				width: 100px;
+			li.locked {
+				h3 {
+					color: $light-grey;
+				}
+				.substep-icon {
+					background: #cccccc;
+				}
+				.substep-image {
+					-webkit-filter: grayscale(100%) opacity(30%);
+				}
 			}
-			.substep-image {
-
+			li.unlocked {
+				.substep-icon:hover {
+					background: $lighter-primary-color;
+					cursor: pointer;
+				}
+			}
+			.substep-title {
+				margin: 15px auto 0 auto;
+				width: 150px;
+			}
+			.substep-icon {
+				background: $primary-color;
+				display: inline-block;
+				height: 110px;
+				width: 110px;
+				@include border-radius(74px);
+				.substep-image{
+					display: inline-block;
+					margin: 27px auto 0 auto;
+					height: 60px;
+					width: 60px;
+				}
 			}
 		}
 	}
@@ -50,6 +79,17 @@
 }
 
 #progress-container {
-	width: 27%;
+	width: 23%;
 	height: 300px;
 }
+
+
+#food-groups-1 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
+#food-groups-2 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
+#serving-sizes-1 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
+#serving-sizes-2 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
+#serving-sizes-3 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
+#healthy-meals-1 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
+#healthy-meals-2 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
+#healthy-meals-3 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
+#meal-planning-1 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}

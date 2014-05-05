@@ -3,41 +3,46 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .question {
-    .question_text {
-        font-family: sans-serif;
-        font-size: 40px;
-        margin: 15px;
-    }
     .skills {
         font-family: sans-serif;
         margin-left: 15px;
         margin-bottom: 20px;
     }
+    .question-text {
+        padding: 20px 0 10px 20px;
+    }
     .answers {
-        li {
+        .answer {
             height: 30px;
             line-height: 30px;
             padding: 10px;
             border-radius: 20px;
-            max-width: 600px;
-            margin-left: 40px;
+            max-width: 840px;
+            margin: 14px 40px;
             list-style: none;
             font-family: sans-serif;
             cursor: pointer;
             .answer_text {
                 display: inline-block;
                 vertical-align: middle;
-                font-size: 20px;
+                font-size: 24px;
                 margin-left: 10px;
+                font-family: "Trebuchet MS", sans-serif;
+                color: $dark-grey;
             }
             .label {
-                height: 20px;
-                width: 20px;
+                height: 25px;
+                width: 25px;
                 vertical-align: middle;
                 display: inline-block;
-                background: #2b8953;
-                border: 5px solid #aaa;
-                border-radius: 45%;
+                background: $light-grey;
+                border-radius: 50%;
+                border: 5px solid $light-grey;
+            }
+        }
+        .answer-selected {
+            .label {
+                background: $primary-color !important;
             }
         }
         li:hover {
@@ -45,6 +50,24 @@
             .label {
                 border-color: #fff;
             }
+            .answer_text {
+                color: #fff;
+            }
         }
     }
+}
+
+.skills {
+    display: inline-block;
+    padding-top: 25px;
+}
+
+#next-question {
+    margin-left: 600px;
+    margin-bottom: 20px;
+    vertical-align: top;
+}
+
+#question-container {
+    margin-top: 30px;
 }

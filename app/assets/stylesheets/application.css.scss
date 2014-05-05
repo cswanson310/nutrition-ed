@@ -11,11 +11,12 @@
  *= require_self
  */
 
-@import "variables.css.scss";
-@import "mixins.css.scss";
-@import "user.scss";
-@import "fonts.css.scss";
-@import "questions.css.scss";
+ @import "variables.css.scss";
+ @import "mixins.css.scss";
+ @import "user.scss";
+ @import "fonts.css.scss";
+ @import "questions.css.scss";
+ @import "buttons.css.scss";
 
 @import url(http://fonts.googleapis.com/css?family=Rancho);
 
@@ -38,6 +39,7 @@ body {
     margin: 0px;
     padding: 0px;
     height: 75px;
+    margin-bottom: 40px;
     .navbar {
         width: $content-width;
         margin-right: auto;
@@ -124,4 +126,9 @@ body {
 .container {
     background: #ffffff;
     @include border-radius(30px);
+    padding: 30px 30px 10px 30px;
+}
+
+.new-line {
+    display: block;
 }
