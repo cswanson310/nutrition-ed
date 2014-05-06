@@ -22,27 +22,47 @@
             list-style: none;
             font-family: sans-serif;
             cursor: pointer;
-            .answer_text {
+            .answer-text {
                 display: inline-block;
                 vertical-align: middle;
                 font-size: 24px;
-                margin-left: 10px;
                 font-family: "Trebuchet MS", sans-serif;
                 color: $dark-grey;
             }
             .label {
-                height: 25px;
-                width: 25px;
                 vertical-align: middle;
                 display: inline-block;
                 background: $light-grey;
+                margin-left: 10px;
+                height: 25px;
+                width: 25px;
                 border-radius: 50%;
                 border: 5px solid $light-grey;
             }
+            .hint {
+                margin-left: 10px;
+                display: inline;
+            }
+            .fa {
+                margin-left: 40px;
+            }
+            .fa-times {
+                color: red;
+            }
+            .fa-check {
+                color: $primary-color;
+            }
         }
         .answer-selected {
+            height: 50px;
             .label {
-                background: $primary-color !important;
+                background: $primary-color;
+            }
+            .label.correct {
+                background: $primary-color;
+            }
+            .label.incorrect {
+                background: red;
             }
         }
         li:hover {
@@ -66,6 +86,16 @@
     margin-left: 600px;
     margin-bottom: 20px;
     vertical-align: top;
+    background: $light-grey;
+}
+#next-question.active {
+    background: $primary-color;
+}
+#next-question:hover {
+    cursor: default;
+}
+#next-question.active:hover {
+    cursor: pointer;
 }
 
 #question-container {
