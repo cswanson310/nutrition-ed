@@ -11,4 +11,9 @@ module QuestionHelper
       return question_path(possible_questions.select{|q| q.difficulty < worst_skill_level}.shuffle.first)
     end
   end
+
+  def progress
+    skills = current_user.user_skills
+    return skills.map(&:level).sum*1.0/skills.map(&:max_level).sum
+  end
 end

@@ -39,7 +39,10 @@ class ApiController < ApplicationController
     overlap_skills = users_skills & question_skills
     overlap_skills.each do |skill_id|
       user_skill = current_user.user_skills.where(skill_id: skill_id).first #there is exactly 1 here
-      user_skill.update_attribute(:level, user_skill.level + delta)
+      if (user_skill.level > user_skill.min_level and
+          user_skill.level < user_skill.max_level)
+        user_skill.update_attribute(:level, user_skill.level + delta)
+      end
     end
 
   end

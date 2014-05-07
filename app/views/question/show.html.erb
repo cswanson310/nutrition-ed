@@ -1,6 +1,11 @@
 <h4>Food Groups</h4>
 <h1>Basics</h1>
 <div class="container" id="question-container">
+  <div class="progress">
+    <div id="full-bar"> </div>
+    <div id="progress-bar" style="width: <%= 100*progress %>%;"> </div>
+    <p id="progress-number" style="right: <%= [5, 100*progress+1].max %>%;"><%= (100*progress).round %>&#37</p>
+  </div>
   <h6 class="question-text" id='<%= @question.id %>'><%= @question.prompt %></h6>
   <div class='answers'>
     <ul>

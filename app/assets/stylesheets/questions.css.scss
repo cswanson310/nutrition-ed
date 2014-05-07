@@ -97,7 +97,30 @@
 #next-question.active:hover {
     cursor: pointer;
 }
-
 #question-container {
     margin-top: 30px;
 }
+.progress {
+    position: relative;
+    height: 20px;
+}
+#progress-bar {
+    border-radius: 50px;
+    height: 20px;
+    background: $primary-color;
+    position: absolute;
+}
+#full-bar {
+    border-radius: 50px;
+    height: 20px;
+    width: 100%;
+    background: $dark-grey;
+    position: absolute;
+}
+#progress-number {
+    font-family: "Trebuchet MS", sans-serif;
+    position: absolute;
+    line-height: 20px;
+    color: #fff;
+}
+
