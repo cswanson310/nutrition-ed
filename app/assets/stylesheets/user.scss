@@ -48,10 +48,10 @@
 					color: $light-grey;
 				}
 				.substep-icon {
-					background: #cccccc;
+					background: #dddddd;
 				}
 				.substep-image {
-					-webkit-filter: grayscale(100%) opacity(30%);
+					-webkit-filter: grayscale(100%) opacity(80%);
 				}
 			}
 			li.current {
@@ -96,11 +96,11 @@
 
 
 #food-groups-1 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
-#food-groups-2 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
-#serving-sizes-1 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
-#serving-sizes-2 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
-#serving-sizes-3 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
-#healthy-meals-1 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
-#healthy-meals-2 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
-#healthy-meals-3 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
-#meal-planning-1 span {background-image: image-url("food-groups-basics.svg"); background-repeat: no-repeat;}
+#food-groups-2 span {background-image: image-url("food-groups-classifying.svg"); background-repeat: no-repeat;}
+#serving-sizes-1 span {background-image: image-url("serving-size-why-matter.svg"); background-repeat: no-repeat;}
+#serving-sizes-2 span {background-image: image-url("serving-sizes-how-much.svg"); background-repeat: no-repeat;}
+#serving-sizes-3 span {background-image: image-url("serving-size-enough-is-enough.svg"); background-repeat: no-repeat;}
+#healthy-meals-1 span {background-image: image-url("healthy-meals-missing.svg"); background-repeat: no-repeat;}
+#healthy-meals-2 span {background-image: image-url("healthy-meals-eat-this.svg"); background-repeat: no-repeat;}
+#healthy-meals-3 span {background-image: image-url("healthy-meals-dessert.svg"); background-repeat: no-repeat;}
+#meal-planning-1 span {background-image: image-url("plan-your-daily-meals.svg"); background-repeat: no-repeat;}
