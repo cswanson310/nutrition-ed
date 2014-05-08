@@ -38,7 +38,6 @@ gem 'friendly_id', github: 'FriendlyId/friendly_id', branch: 'master'
 
 group :production do
   gem 'rails_12factor'
-  gem 'pg'
 end
 
 group :doc do
