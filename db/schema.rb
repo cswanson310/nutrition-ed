@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140428035238) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "answers", force: true do |t|
     t.integer  "question_id"
     t.string   "answer_text"
@@ -35,7 +38,7 @@ ActiveRecord::Schema.define(version: 20140428035238) do
     t.integer "skill_id"
   end
 
-  add_index "questions_skills", ["question_id", "skill_id"], name: "index_questions_skills_on_question_id_and_skill_id"
+  add_index "questions_skills", ["question_id", "skill_id"], name: "index_questions_skills_on_question_id_and_skill_id", using: :btree
 
   create_table "skills", force: true do |t|
     t.string   "name",       null: false
@@ -53,8 +56,8 @@ ActiveRecord::Schema.define(version: 20140428035238) do
     t.datetime "updated_at"
   end
 
-  add_index "user_skills", ["skill_id"], name: "index_user_skills_on_skill_id"
-  add_index "user_skills", ["user_id"], name: "index_user_skills_on_user_id"
+  add_index "user_skills", ["skill_id"], name: "index_user_skills_on_skill_id", using: :btree
+  add_index "user_skills", ["user_id"], name: "index_user_skills_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "username",        null: false
@@ -64,7 +67,7 @@ ActiveRecord::Schema.define(version: 20140428035238) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["slug"], name: "index_users_on_slug"
-  add_index "users", ["username"], name: "index_users_on_username"
+  add_index "users", ["slug"], name: "index_users_on_slug", using: :btree
+  add_index "users", ["username"], name: "index_users_on_username", using: :btree
 
 end

@@ -3,7 +3,6 @@ capybara-*.html
 .rspec
 /log
 /tmp
-/db/*.sqlite3
 /db/fixtures/*.numbers
 /public/system
 /coverage/
