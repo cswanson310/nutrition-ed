@@ -6,22 +6,26 @@
     <div id="progress-bar" style="width: <%= 100*progress %>%;"> </div>
     <p id="progress-number" style="left: <%= [0, 100*progress - 4].max %>%;"><%= (100*progress).round %>&#37</p>
   </div>
-  <h6 class="question-text" id='<%= @question.id %>'><%= @question.prompt %></h6>
-  <div class='answers'>
-    <ul>
-      <% @question.answers.shuffle.each do |answer| %>
-        <li class='answer' id='<%= answer.id %>'>
-          <div class='label'>
-          </div>
-          <p class='answer-text'>
-            <%= answer.answer_text %>
-          </p>
-          <br/>
-          <i class='fa fa-times hidden'></i><i class='fa fa-check hidden'></i><p class="hint"></p>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+  <% if (100*progress).round == 100 then %>
+    <h6 class="question-text">Congratulations! You completed this category!</h6>
+  <% else %>
+    <h6 class="question-text" id='<%= @question.id %>'><%= @question.prompt %></h6>
+    <div class='answers'>
+      <ul>
+        <% @question.answers.shuffle.each do |answer| %>
+          <li class='answer' id='<%= answer.id %>'>
+            <div class='label'>
+            </div>
+            <p class='answer-text'>
+              <%= answer.answer_text %>
+            </p>
+            <br/>
+            <i class='fa fa-times hidden'></i><i class='fa fa-check hidden'></i><p class="hint"></p>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class='skills'>
     <ul>
     <% @question.skills.each do |skill| %>

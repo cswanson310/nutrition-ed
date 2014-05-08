@@ -27,6 +27,7 @@
                 vertical-align: middle;
                 font-size: 24px;
                 font-family: "Trebuchet MS", sans-serif;
+                margin-left: 10px;
                 color: $dark-grey;
             }
             .label {
@@ -102,17 +103,17 @@
 }
 .progress {
     position: relative;
-    height: 20px;
+    height: 40px;
 }
 #progress-bar {
     border-radius: 50px;
-    height: 20px;
+    height: 100%;
     background: $primary-color;
     position: absolute;
 }
 #full-bar {
     border-radius: 50px;
-    height: 20px;
+    height: 100%;
     width: 100%;
     background: $dark-grey;
     position: absolute;
@@ -120,7 +121,7 @@
 #progress-number {
     font-family: "Trebuchet MS", sans-serif;
     position: absolute;
-    line-height: 20px;
+    line-height: 40px;
     color: #fff;
 }
 

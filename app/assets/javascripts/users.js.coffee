@@ -1,4 +1,4 @@
-$ ->
+ready = ->
   $('.current').bind('click', () ->
     $.ajax(
         type: 'GET',
@@ -7,3 +7,6 @@ $ ->
             window.location.replace(data["url"])
     )
   )
+
+$(document).ready(ready)
+$(document).on('page:load', ready)
