@@ -1,24 +1,27 @@
-Questions!,question difficulty (out of 10),question hint,correct answer,incorrect 1,custom hint (optional),incorrect 2,custom hint (optional),incorrect 3,custom hint (optional),"skill(s), comma separated",,,
-Which of the following is a food group?,3,That’s a little too specific for a food group,fruits,sweets,Not quite!,beans,,milk,,identifying food groups,,,
-Which of the following is not a food group?,4,That is a food group,rice,vegetables,,fruits,,grains,,identifying food groups,,,
-how many food groups are there?,6,Not quite!,5,3,,4,,6,,identifying food groups,,,
-"how many of the following are food groups? fruits, meats, beans, dairy",8,Not quite!,2,1,,4,,3,,identifying food groups,,6,Not quite!
-,,,,,,,,,,,,,
-which food group does an apple belong to?,2,Not quite! Try again,fruits,vegetables,,grains,,plants,that’s not a food group!,classifying foods,,,
-which food group do beans belong to?,9,Not quite! Try again,proteins,vegetables,,meats,that’s not a food group!,dairy,,classifying foods,,,
-which food group does a squash belong to?,5,Not quite! Try again,vegetables,dairy,,grains,,plants,that’s not a food group!,classifying foods,,,
-which food group does milk belong to?,3,Not quite! Try again,dairy,grains,,fruits,,pizza,that’s not a food group!,classifying foods,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
+Questions!,question difficulty (out of 10),question hint,correct answer,incorrect 1,custom hint (optional),incorrect 2,custom hint (optional),incorrect 3,custom hint (optional),"skill(s), comma separated"
+Which of the following is a food group?,3,That’s a little too specific for a food group,fruits,sweets,Not quite!,beans,,milk,,identifying food groups
+Which of the following is not a food group?,4,That is a food group,rice,vegetables,,fruits,,grains,,identifying food groups
+how many food groups are there?,6,Not quite!,5,3,,4,,6,,identifying food groups
+"how many of the following are food groups? fruits, meats, beans, dairy",8,Not quite!,2,1,,4,,3,,identifying food groups
+"how many of the following are food groups? nuts, sweets, dairy, fruits",7,Not quite!,2,1,,3,,0,,identifying food groups
+what are the 5 food groups?,10,,"fruits, vegetables, grains, dairy, proteins","fruits, vegetables, grains, dairy, meat",Not quite! Meat isn’t a food group!,"fruits, vegetables, grains, dairy",Not quite! It’s missing one,"plants, dairy, grains, protein",Not quite! Try again,identifying food groups
+Are grains a food group,1,Grains are a food group,Yes,No,,It depends,,Only on Wednesdays,,identifying food groups
+,,,,,,,,,,
+which food group does an apple belong to?,2,Not quite! Try again,fruits,vegetables,,grains,,plants,that’s not a food group!,classifying foods
+which food group do beans belong to?,9,Not quite! Try again,proteins,vegetables,,meats,that’s not a food group!,dairy,,classifying foods
+which food group does a squash belong to?,5,Not quite! Try again,vegetables,dairy,,grains,,plants,that’s not a food group!,classifying foods
+which food group does milk belong to?,3,Not quite! Try again,dairy,grains,,fruits,,pizza,that’s not a food group!,classifying foods
+which food group does a tomato belong to?,8,Oops! A tomato is a vegetable,vegetables,fruits,"Actually, no! A tomato is a vegetable",plants,,dairy,,classifying foods
+Which of the following is in the dairy food group?,4,Not quite! Try again,cheese,water,,soy milk,,honey,,classifying foods
+What food group(s) does cheese pizza belong to?,10,Not quite! Try again,"dairy, grains, vegetables","dairy, grains",,"grains, vegetables",,dariy,,classifying foods
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
