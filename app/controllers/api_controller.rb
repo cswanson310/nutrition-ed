@@ -1,5 +1,5 @@
 class ApiController < ApplicationController
-  before_action :set_question, only: [:choose_answer, :next_question]
+  before_action :set_question, only: [:choose_answer]
 
   include QuestionHelper
 
