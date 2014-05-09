@@ -15,3 +15,11 @@
 //= require turbolinks
 //= require_tree .
 
+ready = function () {
+  if ($('body').hasClass('home') {
+    $('#home').addClass('active-nav');
+  }
+}
+
+$(document).ready(ready);
+$(document).on('page:load', ready);

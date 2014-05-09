@@ -13,9 +13,9 @@
   <div class='navbar'>
     <ul class='options'>
       <li class='nav-option' id='logo'><span id="tomato-logo"><%= image_tag("tomato.svg") %></span><span id="name">tomato</span></li>
-      <li class='nav-link nav-option active-nav' id='home'><a href='/'>Home</a></li>
-      <li class='nav-link nav-option' id='home'><a href='/'>For Kids</a></li>
-      <li class='nav-link nav-option' id='home'><a href='/'>For Parents</a></li>
+      <li class='nav-link nav-option' id='home'><a href='/'>Home</a></li>
+      <li class='nav-link nav-option' id='kids'><a href='<%= kids_path %>'>For Kids</a></li>
+      <li class='nav-link nav-option' id='parents'><a href='<%= parents_path %>'>For Parents</a></li>
       <% if current_user then %>
         <li class='nav-option' id='profile-image'><span class="inner-image"><a href="<%= user_path(current_user) %>"><%= image_tag("profile-image.svg") %></a></span></li>
         <li class='nav-option' id='username'><%= link_to current_user.username.capitalize, user_path(current_user) %></li>

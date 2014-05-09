@@ -13,6 +13,9 @@ NutritionEd::Application.routes.draw do
   get 'login', to: 'user_sessions#new', as: :login
   get 'logout', to: 'user_sessions#destroy', as: :logout
 
+  get 'kids', to: 'home#kids', as: :kids
+  get 'parents', to: 'home#parents', as: :parents
+
   resources :api, only: [] do
     collection do
       get 'choose_answer'

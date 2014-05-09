@@ -2,4 +2,15 @@
     /* see the application layout, this will only style pages from the
        home controller */
     font-family: helvetica;
+
+    .content-wrapper {
+        max-width: 1000px;
+        background: #fff;
+        border-radius: 50px;
+        min-height: 500px;
+        padding: 20px;
+    }
+    p, h1 {
+        padding: 10px;
+    }
 }
