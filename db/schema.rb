@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20140428035238) do
   create_table "user_skills", force: true do |t|
     t.integer  "user_id"
     t.integer  "skill_id"
-    t.integer  "level",      default: 6
+    t.integer  "level",      default: 4
     t.integer  "max_level",  default: 10
     t.integer  "min_level",  default: 1
     t.datetime "created_at"

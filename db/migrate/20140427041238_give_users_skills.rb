@@ -3,7 +3,7 @@ class GiveUsersSkills < ActiveRecord::Migration
     create_table :user_skills do |t|
       t.belongs_to :user
       t.belongs_to :skill
-      t.integer :level, default: 6
+      t.integer :level, default: 4
       t.integer :max_level, default: 10
       t.integer :min_level, default: 1
       t.timestamps
