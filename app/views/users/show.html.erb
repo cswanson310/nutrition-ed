@@ -97,8 +97,21 @@
 <!-- progress -->
 <div class="container" id="progress-container">
 	<h4>Your Progress</h4>
-	<p>Food Groups</p>
-	<p>Serving Sizes</p>
-	<p>Healthy Meals</p>
-	<p>Planning Meals</p>
+  <ul id='progress-list'>
+    <li class='side-progress'>
+      <p>Food Groups</p>
+      <%= render partial: "progress_bar", locals: {skill: 'basic'} %>
+    </li>
+    <li class='side-progress'>
+      <p>Serving Sizes</p>
+      <%= render partial: "progress_bar", locals: {skill: 'other'} %>
+    </li>
+    <li class='side-progress'>
+      <p>Healthy Meals</p>
+      <%= render partial: "progress_bar", locals: {skill: 'other'} %>
+    </li>
+    <li class='side-progress'>
+      <p>Planning Meals</p>
+      <%= render partial: "progress_bar", locals: {skill: 'other'} %>
+    </li>
 </div>

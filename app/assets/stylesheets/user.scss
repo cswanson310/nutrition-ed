@@ -2,6 +2,31 @@
 @import "variables.css.scss";
 
 .users {
+    .progress {
+        position: relative;
+        height: 20px;
+    }
+    .progress-bar {
+        border-radius: 50px;
+        height: 100%;
+        background: $primary-color;
+        position: absolute;
+    }
+    .full-bar {
+        border-radius: 50px;
+        height: 100%;
+        width: 100%;
+        background: $light-grey;
+        position: absolute;
+    }
+    .progress-number {
+        margin: 0;
+        font-family: "Trebuchet MS", sans-serif;
+        position: absolute;
+        font-size: 12px;
+        line-height: 20px;
+        color: #fff;
+    }
     font-family: sans-serif;
     h1, p {
         margin: 10px;
