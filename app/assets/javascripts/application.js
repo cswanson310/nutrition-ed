@@ -16,8 +16,13 @@
 //= require_tree .
 
 ready = function () {
-  if ($('body').hasClass('home') {
+  if ($("#home-div").length > 0) {
+    //if it exists
     $('#home').addClass('active-nav');
+  } else if ($("#kids-div").length > 0) {
+    $('#kids').addClass('active-nav');
+  } else if ($("#parents-div").length > 0) {
+    $('#parents').addClass('active-nav');
   }
 }
 
